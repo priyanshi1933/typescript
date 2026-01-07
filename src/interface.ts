@@ -21,3 +21,15 @@ const coloredSquare:ColoredSquare={
     color:"Pink"
 }
 console.log(coloredSquare);
+
+//declaration merging
+interface Point{
+    x:number
+    y:number
+}
+interface Point{
+    z:number
+}
+const point:Point={x:10,y:20,z:30}
+console.log(point);
+

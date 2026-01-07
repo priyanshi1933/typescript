@@ -10,4 +10,6 @@ const coloredSquare = {
     color: "Pink"
 };
 console.log(coloredSquare);
+const point = { x: 10, y: 20, z: 30 };
+console.log(point);
 //# sourceMappingURL=interface.js.map

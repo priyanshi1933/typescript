@@ -24,4 +24,25 @@ function pow(value, exponent = 10) {
     return value ** exponent;
 }
 console.log(pow(10));
+//anonymous function
+const sub = function (x, y) {
+    return x - y;
+};
+console.log(sub(60, 6));
+//arrow function
+const subtract = (x, y) => {
+    return x - y;
+};
+const divide = (x, y) => x / y;
+console.log(subtract(40, 20));
+console.log(divide(40, 20));
+//rest parameter
+function sumAll(firstName, ...remainingNumbers) {
+    let total = 0;
+    for (const num of remainingNumbers) {
+        total += num;
+    }
+    return total;
+}
+console.log(sumAll("John", 1, 2, 3, 4, 5));
 //# sourceMappingURL=function.js.map

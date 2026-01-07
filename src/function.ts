@@ -26,3 +26,28 @@ function pow(value:number,exponent:number=10){
     return value**exponent;
 }
 console.log(pow(10));
+
+//anonymous function
+const sub=function(x:number,y:number):number{
+    return x-y;
+}
+console.log(sub(60,6));
+
+//arrow function
+const subtract=(x:number,y:number):number=>{
+    return x-y;
+}
+const divide=(x:number,y:number):number=>x/y;
+console.log(subtract(40,20));
+console.log(divide(40,20));
+
+//rest parameter
+function sumAll(firstName: string, ...remainingNumbers: number[]): number {
+  let total = 0;
+  for (const num of remainingNumbers) {
+    total += num;
+  }
+  return total;
+}
+
+console.log(sumAll("John", 1, 2, 3, 4, 5)); 
