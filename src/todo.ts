@@ -31,14 +31,25 @@ function addListItem(task:Task) {
     const item=document.createElement("li")
     const label=document.createElement("label")
     const checkbox=document.createElement("input")
+    checkbox.type="checkbox"
+    checkbox.checked=task.completed
     checkbox.addEventListener("change",()=>{
         task.completed=checkbox.checked
         saveTasks()
     })
-    checkbox.type="checkbox"
-    checkbox.checked=task.completed
+    const deleteBtn=document.createElement("button")
+    deleteBtn.innerText="Delete";
+    deleteBtn.style.marginLeft="10px";
+    deleteBtn.addEventListener("click",()=>{
+        item.remove();
+        const index=tasks.indexOf(task);
+        if(index>-1){
+            tasks.splice(index,1);
+            saveTasks();
+        }
+    })
     label.append(checkbox,task.title)
-    item.append(label)
+    item.append(label,deleteBtn)
     list?.append(item)
 } 
 function saveTasks(){
